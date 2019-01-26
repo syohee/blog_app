@@ -96,9 +96,10 @@ body {
 .blogs_path { padding-top: 30px; }
 .workbreak {word-break: break-all;}
 
+
 @media (min-width: 768px){
   body{
-    font-size: 25px;
+    font-size: 15px;
   }
   .top_box { margin-top: 5%}
   .img_box img { width: 20%; }
@@ -106,7 +107,7 @@ body {
 
 .button {
   display: inline-block;
-  padding: 8px 15px;
+  padding: 4px 9px;
   font-size: 15px;
   cursor: pointer;
   text-align: center;
@@ -123,4 +124,15 @@ body {
 .button:active {
   background-color: #B40431;
   transform: translateY(2px);
+}
+
+@media (min-width: 992px){
+  .col-md-1 {
+    width: 11%;
+  }
+}
+
+
+.col-md-1, .col-xs-2 {
+  padding: 0;
 }
