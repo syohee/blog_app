@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :login_check, only: [:new, :edit, :update, :destroy, :show]
   
   def top
   end
