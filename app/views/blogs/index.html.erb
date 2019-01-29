@@ -6,11 +6,16 @@
     
     <div class="blog_box col-md-6">
       <ul class="row">
-        <li class="col-md-1 col-xs-2 workbreak"><%= blog.title %></li>
-        <li class="col-md-6 col-xs-3 workbreak"><%= blog.content %></th>
+        <li class="col-md-1 col-xs-1 workbreak"><%= blog.title %></li>
+        <li class="col-md-5 col-xs-3 workbreak"><%= blog.content %></li>
+        <li class="col-md-1 col-xs-1 workbreak"><%= blog.user.name %></li>
         <li class="col-md-1 col-xs-2"><%= link_to 'show', blog_path(blog.id), class: 'button' %></li>
-        <li class="col-md-1 col-xs-2"><%= link_to 'edit', edit_blog_path(blog.id), class: 'button' %></li>
-        <li class="col-md-1 col-xs-2"><%= link_to 'delete', blog_path(blog.id), method: :delete, class: 'button' %></li>
+        <% if defined?(current_user.id) %>
+          <% if blog.user_id == current_user.id %>
+            <li class="col-md-1 col-xs-2"><%= link_to 'edit', edit_blog_path(blog.id), class: 'button' %></li>
+            <li class="col-md-1 col-xs-2"><%= link_to 'delete', blog_path(blog.id), method: :delete, class: 'button' %></li>
+          <% end %>
+        <% end %>
       </ul>
     </div>
     <% end %>
