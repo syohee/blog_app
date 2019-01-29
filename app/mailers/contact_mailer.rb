@@ -1,7 +1,7 @@
 class ContactMailer < ApplicationMailer
   def contact_mail(contact)
     @contact = contact
-    mail to: 'tjdgmll2@naver.com', subject: "toiawasenomail"
+    mail to: 'test@exam.com', subject: "toiawasenomail"
   end
   
   def blog_mail(current_user)
