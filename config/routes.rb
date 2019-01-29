@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
   resources :contacts
-  get 'favorites/create'
-
-  get 'favorites/destroy'
-
-  get 'sessions/new'
 
   root to: 'blogs#top'
   get '/top', to: 'blogs#top'
