@@ -20,6 +20,7 @@ class BlogsController < ApplicationController
   def create
     @blog = current_user.blogs.build(blog_params)
     if @blog.save
+      ContactMailer.blog_mail(current_user).deliver 
       redirect_to blogs_path
     else
       render 'new'
