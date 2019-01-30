@@ -1,0 +1,19 @@
+<%= form_with(model: @user, local: true, url: user_path) do |form| %>
+ <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @user.errors.count %> errors</h2>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div>
+    <%= image_tag(@user.image.url) if @user.image.url %>
+    <%= form.file_field :image %> 
+    <%= form.hidden_field :image_cache %>
+  </div>
+  <%= form.submit class: 'button' %>
+<% end %>

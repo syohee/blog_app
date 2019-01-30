@@ -1,4 +1,9 @@
 <h1>Show Blogs</h1>
+
+<p>
+  <%= image_tag @blog.image.url if @blog.image.url %>
+</p>
+
 <p>title : <%= @blog.title %></p>
 <p>content : <%= @blog.content %></p>
 

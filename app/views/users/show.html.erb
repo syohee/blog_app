@@ -1,6 +1,14 @@
 <h1><%= @user.name %> page </h1>
 <p>emails : <%= @user.email %></p>
 
+
+
+<br>
+
+  <%= image_tag @user.image.url if @user.image.url%>
+
+
+
 <% @favorites_blogs.each do |favorites_blogs| %>
   <div class="blog_box col-md-6">
     <ul class="row">
