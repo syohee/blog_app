@@ -1,7 +1,7 @@
 class ContactMailer < ApplicationMailer
   def contact_mail(contact)
     @contact = contact
-    mail to: 'test@exam.com', subject: "toiawasenomail"
+    mail to: 'tjdgmll2@naver.com', subject: "heroku mailer test mail"
   end
   
   def blog_mail(current_user)
